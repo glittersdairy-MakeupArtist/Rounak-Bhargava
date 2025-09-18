@@ -19,11 +19,11 @@
 
     <!-- Desktop Menu -->
     <ul class="hidden md:flex space-x-3">
-      <li><a href="#home" class="hover:text-pink text-bold p-3 bg-pink-100 rounded-full shadow-sm">Home</a></li>
-      <li><a href="#about" class="hover:text-pink text-bold p-3 bg-pink-100 rounded-full shadow-sm">About</a></li>
-      <li><a href="#Gallery" class="hover:text-pink text-bold p-3 bg-pink-100 rounded-full shadow-sm">Gallery</a></li>
-      <li><a href="#services" class="hover:text-pink text-bold p-3 bg-pink-100 rounded-full shadow-sm">Services</a></li>
-      <li><a href="#contact" class="hover:text-pink text-bold p-3 bg-pink-100 rounded-full shadow-sm">Contact</a></li>
+      <li><a href="#home" class="hover:text-pink p-3 bg-pink-100 rounded-full shadow-sm">Home</a></li>
+      <li><a href="#about" class="hover:text-pink p-3 bg-pink-100 rounded-full shadow-sm">About</a></li>
+      <li><a href="#Gallery" class="hover:text-pink p-3 bg-pink-100 rounded-full shadow-sm">Gallery</a></li>
+      <li><a href="#services" class="hover:text-pink p-3 bg-pink-100 rounded-full shadow-sm">Services</a></li>
+      <li><a href="#contact" class="hover:text-pink p-3 bg-pink-100 rounded-full shadow-sm">Contact</a></li>
     </ul>
 
     <!-- Mobile Menu Button -->
@@ -34,11 +34,11 @@
 
   <!-- Mobile Menu -->
   <ul id="mobile-menu" class="hidden flex-col space-y-2 bg-pink-100 px-6 py-4 md:hidden">
-    <li><a href="#home" class="hover:text-pink text-lg text-bold p-4 bg-pink-100 rounded-full shadow-sm">Home</a></li>
-    <li><a href="#about" class="hover:text-pink text-lg text-bold p-4 bg-pink-100 rounded-full shadow-sm">About</a></li>
-    <li><a href="#Gallery" class="hover:text-pink text-lg text-bold p-4 bg-pink-100 rounded-full shadow-sm">Gallery</a></li>
-    <li><a href="#services" class="hover:text-pink text-lg text-bold p-4 bg-pink-100 rounded-full shadow-sm">Services</a></li>
-    <li><a href="#contact" class="hover:text-pink text-lg text-bold p-4 bg-pink-100 rounded-full shadow-sm">Contact</a></li>
+    <li><a href="#home" class="block p-4 bg-pink-100 rounded-full shadow-sm">Home</a></li>
+    <li><a href="#about" class="block p-4 bg-pink-100 rounded-full shadow-sm">About</a></li>
+    <li><a href="#Gallery" class="block p-4 bg-pink-100 rounded-full shadow-sm">Gallery</a></li>
+    <li><a href="#services" class="block p-4 bg-pink-100 rounded-full shadow-sm">Services</a></li>
+    <li><a href="#contact" class="block p-4 bg-pink-100 rounded-full shadow-sm">Contact</a></li>
   </ul>
 </nav>
 
@@ -47,31 +47,13 @@
   const mobileMenu = document.getElementById("mobile-menu");
 
   menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
-    mobileMenu.classList.toggle("flex"); // ✅ flex ensures vertical list
-  });
-
-  // Auto-close when a link is clicked (mobile UX fix)
-  const mobileLinks = mobileMenu.querySelectorAll("a");
-  mobileLinks.forEach(link => {
-    link.addEventListener("click", () => {
+    if (mobileMenu.classList.contains("hidden")) {
+      mobileMenu.classList.remove("hidden");
+    } else {
       mobileMenu.classList.add("hidden");
-      mobileMenu.classList.remove("flex");
-    });
+    }
   });
 </script>
-
-
-<section id="home" class="hero h-screen flex items-center justify-center text-center py-20 px-10 bg-pink-300" style="background-image: url('assets/images/rounak\ logo.png');background-position:bottom; background-size: 100%;"> 
-  <div> 
-    <h2 class="text-5xl font-bold text-white">Welcome to Glitter Diary</h2> 
-    <p class="mt-4 text-lg font-semibold text-black">Bringing out your inner beauty with art and passion</p> 
-    <a href="#contact" class="mt-6 inline-block bg-pink-500 text-white px-6 py-3 rounded-lg shadow hover:bg-white-400">Book Now</a> 
-  </div> 
-</section>
-
-
-  
 
 <section id="about" class="py-20 bg-pink-200 "> 
   <div class="max-w-7xl mx-auto px-10 flex flex-col md:flex-row items-center"> 
