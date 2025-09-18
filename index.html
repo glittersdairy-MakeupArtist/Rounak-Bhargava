@@ -11,7 +11,7 @@
 </head> 
 <body style="font-family: 'Poppins', sans-serif;">
 
-<!-- ✅ Responsive Navbar with Slide Animation -->
+<!-- ✅ Final Responsive Navbar -->
 <nav class="fixed w-full top-0 left-0 bg-pink-200 shadow z-50">
   <div class="container mx-auto flex justify-between items-center py-4">
     <!-- Logo -->
@@ -32,7 +32,7 @@
     </button>
   </div>
 
-  <!-- Mobile Menu (hidden by default, animated) -->
+  <!-- Mobile Menu -->
   <ul id="mobile-menu" 
       class="hidden flex-col space-y-2 bg-pink-100 px-6 py-4 md:hidden transform transition-all duration-300 ease-in-out -translate-y-5 opacity-0">
     <li><a href="#home" class="block p-4 bg-pink-100 rounded-full shadow-sm">Home</a></li>
@@ -46,24 +46,31 @@
 <script>
   const menuBtn = document.getElementById("menu-btn");
   const mobileMenu = document.getElementById("mobile-menu");
+  let menuOpen = false;
 
   menuBtn.addEventListener("click", () => {
-    if (mobileMenu.classList.contains("hidden")) {
+    if (!menuOpen) {
+      // Open menu
       mobileMenu.classList.remove("hidden");
       setTimeout(() => {
         mobileMenu.classList.remove("-translate-y-5", "opacity-0");
         mobileMenu.classList.add("translate-y-0", "opacity-100");
-      }, 10); // delay to trigger transition
+      }, 10);
+      menuBtn.textContent = "✖"; // change icon
+      menuOpen = true;
     } else {
+      // Close menu
       mobileMenu.classList.add("-translate-y-5", "opacity-0");
       mobileMenu.classList.remove("translate-y-0", "opacity-100");
       setTimeout(() => {
         mobileMenu.classList.add("hidden");
-      }, 300); // wait for animation
+      }, 300);
+      menuBtn.textContent = "☰"; // change back
+      menuOpen = false;
     }
   });
 
-  // ✅ Auto-close when clicking a link
+  // Auto-close when clicking a link
   const mobileLinks = mobileMenu.querySelectorAll("a");
   mobileLinks.forEach(link => {
     link.addEventListener("click", () => {
@@ -72,9 +79,12 @@
       setTimeout(() => {
         mobileMenu.classList.add("hidden");
       }, 300);
+      menuBtn.textContent = "☰";
+      menuOpen = false;
     });
   });
 </script>
+
 
 
 <section id="about" class="py-20 bg-pink-200 "> 
