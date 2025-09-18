@@ -27,7 +27,7 @@
     </ul>
 
     <!-- Mobile Menu Button -->
-    <button id="menu-btn" class="md:hidden text-pink text-3xl focus:outline-none">
+    <button id="menu-btn" class="md:hidden text-pink text-3xl focus:outline-none z-50">
       ☰
     </button>
   </div>
@@ -47,16 +47,19 @@
   const mobileMenu = document.getElementById("mobile-menu");
 
   menuBtn.addEventListener("click", () => {
-    if (mobileMenu.classList.contains("hidden")) {
-      mobileMenu.classList.remove("hidden");
-      mobileMenu.classList.add("flex");  // ✅ Show menu
-    } else {
-      mobileMenu.classList.add("hidden"); 
-      mobileMenu.classList.remove("flex"); // ✅ Hide menu
-    }
+    mobileMenu.classList.toggle("hidden");
+    mobileMenu.classList.toggle("flex"); // ✅ flex ensures vertical list
+  });
+
+  // Auto-close when a link is clicked (mobile UX fix)
+  const mobileLinks = mobileMenu.querySelectorAll("a");
+  mobileLinks.forEach(link => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.add("hidden");
+      mobileMenu.classList.remove("flex");
+    });
   });
 </script>
-
 
 
 <section id="home" class="hero h-screen flex items-center justify-center text-center py-20 px-10 bg-pink-300" style="background-image: url('assets/images/rounak\ logo.png');background-position:bottom; background-size: 100%;"> 
