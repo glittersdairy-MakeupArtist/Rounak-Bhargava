@@ -1,91 +1,104 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-<head> 
-  <meta charset="UTF-8"> 
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
-  <title>Glitter Diary</title> 
-  <script src="https://cdn.tailwindcss.com"></script> 
-  <link rel="stylesheet" href="assets/css/style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glitter Diary</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-white text-gray-800">
 
-</head> 
-<body style="font-family: 'Poppins', sans-serif;">
+  <!-- ✅ Final Responsive Navbar -->
+  <nav class="fixed w-full top-0 left-0 bg-pink-200 shadow z-50">
+    <div class="container mx-auto flex justify-between items-center py-4 px-4">
+      <!-- Logo -->
+      <h1 class="text-2xl font-bold text-pink-600">Glitter Diary</h1>
 
-<!-- ✅ Final Responsive Navbar -->
-<nav class="fixed w-full top-0 left-0 bg-pink-200 shadow z-50">
-  <div class="container mx-auto flex justify-between items-center py-4">
-    <!-- Logo -->
-    <h1 class="text-2xl font-bold text-pink-600">Glitter Diary</h1>
+      <!-- Desktop Menu -->
+      <ul class="hidden md:flex space-x-3">
+        <li><a href="#home" class="hover:text-pink-600 p-3 bg-pink-100 rounded-full shadow-sm">Home</a></li>
+        <li><a href="#about" class="hover:text-pink-600 p-3 bg-pink-100 rounded-full shadow-sm">About</a></li>
+        <li><a href="#Gallery" class="hover:text-pink-600 p-3 bg-pink-100 rounded-full shadow-sm">Gallery</a></li>
+        <li><a href="#services" class="hover:text-pink-600 p-3 bg-pink-100 rounded-full shadow-sm">Services</a></li>
+        <li><a href="#contact" class="hover:text-pink-600 p-3 bg-pink-100 rounded-full shadow-sm">Contact</a></li>
+      </ul>
 
-    <!-- Desktop Menu -->
-    <ul class="hidden md:flex space-x-3">
-      <li><a href="#home" class="hover:text-pink-600 p-3 bg-pink-100 rounded-full shadow-sm">Home</a></li>
-      <li><a href="#about" class="hover:text-pink-600 p-3 bg-pink-100 rounded-full shadow-sm">About</a></li>
-      <li><a href="#Gallery" class="hover:text-pink-600 p-3 bg-pink-100 rounded-full shadow-sm">Gallery</a></li>
-      <li><a href="#services" class="hover:text-pink-600 p-3 bg-pink-100 rounded-full shadow-sm">Services</a></li>
-      <li><a href="#contact" class="hover:text-pink-600 p-3 bg-pink-100 rounded-full shadow-sm">Contact</a></li>
+      <!-- Mobile Menu Button -->
+      <button id="menu-btn" class="md:hidden text-pink-600 text-3xl focus:outline-none z-50">
+        ☰
+      </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <ul id="mobile-menu" 
+        class="hidden flex-col space-y-2 bg-pink-100 px-6 py-4 md:hidden transform transition-all duration-300 ease-in-out -translate-y-5 opacity-0">
+      <li><a href="#home" class="block p-4 bg-pink-100 rounded-full shadow-sm">Home</a></li>
+      <li><a href="#about" class="block p-4 bg-pink-100 rounded-full shadow-sm">About</a></li>
+      <li><a href="#Gallery" class="block p-4 bg-pink-100 rounded-full shadow-sm">Gallery</a></li>
+      <li><a href="#services" class="block p-4 bg-pink-100 rounded-full shadow-sm">Services</a></li>
+      <li><a href="#contact" class="block p-4 bg-pink-100 rounded-full shadow-sm">Contact</a></li>
     </ul>
+  </nav>
 
-    <!-- Mobile Menu Button -->
-    <button id="menu-btn" class="md:hidden text-pink-600 text-3xl focus:outline-none z-50">
-      ☰
-    </button>
-  </div>
+  <!-- ✅ Example Sections -->
+  <section id="home" class="h-screen flex items-center justify-center bg-pink-100">
+    <h2 class="text-4xl font-bold">Welcome to Glitter Diary</h2>
+  </section>
 
-  <!-- Mobile Menu -->
-  <ul id="mobile-menu" 
-      class="hidden flex-col space-y-2 bg-pink-100 px-6 py-4 md:hidden transform transition-all duration-300 ease-in-out -translate-y-5 opacity-0">
-    <li><a href="#home" class="block p-4 bg-pink-100 rounded-full shadow-sm">Home</a></li>
-    <li><a href="#about" class="block p-4 bg-pink-100 rounded-full shadow-sm">About</a></li>
-    <li><a href="#Gallery" class="block p-4 bg-pink-100 rounded-full shadow-sm">Gallery</a></li>
-    <li><a href="#services" class="block p-4 bg-pink-100 rounded-full shadow-sm">Services</a></li>
-    <li><a href="#contact" class="block p-4 bg-pink-100 rounded-full shadow-sm">Contact</a></li>
-  </ul>
-</nav>
+  <section id="about" class="h-screen flex items-center justify-center bg-white">
+    <h2 class="text-4xl font-bold">About Us</h2>
+  </section>
 
-<script>
-  const menuBtn = document.getElementById("menu-btn");
-  const mobileMenu = document.getElementById("mobile-menu");
-  let menuOpen = false;
+  <section id="Gallery" class="h-screen flex items-center justify-center bg-pink-100">
+    <h2 class="text-4xl font-bold">Gallery</h2>
+  </section>
 
-  menuBtn.addEventListener("click", () => {
-    if (!menuOpen) {
-      // Open menu
-      mobileMenu.classList.remove("hidden");
-      setTimeout(() => {
-        mobileMenu.classList.remove("-translate-y-5", "opacity-0");
-        mobileMenu.classList.add("translate-y-0", "opacity-100");
-      }, 10);
-      menuBtn.textContent = "✖"; // change icon
-      menuOpen = true;
-    } else {
-      // Close menu
-      mobileMenu.classList.add("-translate-y-5", "opacity-0");
-      mobileMenu.classList.remove("translate-y-0", "opacity-100");
-      setTimeout(() => {
-        mobileMenu.classList.add("hidden");
-      }, 300);
-      menuBtn.textContent = "☰"; // change back
-      menuOpen = false;
-    }
-  });
+  <section id="services" class="h-screen flex items-center justify-center bg-white">
+    <h2 class="text-4xl font-bold">Services</h2>
+  </section>
 
-  // Auto-close when clicking a link
-  const mobileLinks = mobileMenu.querySelectorAll("a");
-  mobileLinks.forEach(link => {
-    link.addEventListener("click", () => {
-      mobileMenu.classList.add("-translate-y-5", "opacity-0");
-      mobileMenu.classList.remove("translate-y-0", "opacity-100");
-      setTimeout(() => {
-        mobileMenu.classList.add("hidden");
-      }, 300);
-      menuBtn.textContent = "☰";
-      menuOpen = false;
+  <section id="contact" class="h-screen flex items-center justify-center bg-pink-100">
+    <h2 class="text-4xl font-bold">Contact</h2>
+  </section>
+
+  <!-- ✅ Navbar Script -->
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+    let menuOpen = false;
+
+    menuBtn.addEventListener("click", () => {
+      if (!menuOpen) {
+        mobileMenu.classList.remove("hidden");
+        setTimeout(() => {
+          mobileMenu.classList.remove("-translate-y-5", "opacity-0");
+          mobileMenu.classList.add("translate-y-0", "opacity-100");
+        }, 10);
+        menuOpen = true;
+      } else {
+        mobileMenu.classList.add("-translate-y-5", "opacity-0");
+        mobileMenu.classList.remove("translate-y-0", "opacity-100");
+        setTimeout(() => {
+          mobileMenu.classList.add("hidden");
+        }, 300);
+        menuOpen = false;
+      }
     });
-  });
-</script>
 
-
+    // Auto-close when clicking a link
+    document.querySelectorAll("#mobile-menu a").forEach(link => {
+      link.addEventListener("click", () => {
+        mobileMenu.classList.add("-translate-y-5", "opacity-0");
+        mobileMenu.classList.remove("translate-y-0", "opacity-100");
+        setTimeout(() => {
+          mobileMenu.classList.add("hidden");
+        }, 300);
+        menuOpen = false;
+      });
+    });
+  </script>
+</body>
+</html>
 
 <section id="about" class="py-20 bg-pink-200 "> 
   <div class="max-w-7xl mx-auto px-10 flex flex-col md:flex-row items-center"> 
