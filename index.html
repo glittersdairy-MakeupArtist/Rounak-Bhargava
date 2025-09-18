@@ -13,28 +13,27 @@
   ...
 </body>
 
-<!-- Navbar -->
 <nav class="fixed w-full top-0 left-0 bg-pink-200 shadow z-50">
-  <div class="container mx-auto flex justify-between items-center py-4">
-    <!-- Logo -->
-    <h1 class="text-2xl font-bold text-pink-600">Glitter Diary</h1>
+  <div class="container mx-auto flex justify-between items-center  py-4">
 
-    <!-- Desktop Menu -->
+    <h1 class="text-2xl font-bold text-pink-600 ">Glitter Diary</h1>
+
+
     <ul class="hidden md:flex space-x-3">
-      <li><a href="#home" class="hover:text-pink  text-bold p-4 bg-pink-100 rounded-full shadow-sm">Home</a></li>
-      <li><a href="#about" class="hover:text-pink  text-bold p-4 bg-pink-100 rounded-full shadow-sm">About</a></li>
-      <li><a href="#Gallery" class="hover:text-pink  text-bold p-4 bg-pink-100 rounded-full shadow-sm">Gallery</a></li>
-      <li><a href="#services" class="hover:text-pink  text-bold p-4 bg-pink-100 rounded-full shadow-sm">Services</a></li>
-      <li><a href="#contact" class="hover:text-pink  text-bold p-4 bg-pink-100 rounded-full shadow-sm">Contact</a></li>
+      <li><a href="#home" class="hover:text-pink  text-bold p-3 bg-pink-100 rounded-full shadow-sm">Home</a></li>
+      <li><a href="#about" class="hover:text-pink  text-bold p-3 bg-pink-100 rounded-full shadow-sm">About</a></li>
+      <li><a href="#Gallery" class="hover:text-pink  text-bold p-3 bg-pink-100 rounded-full shadow-sm">Gallery</a></li>
+      <li><a href="#services" class="hover:text-pink  text-bold p-3 bg-pink-100 rounded-full shadow-sm">Services</a></li>
+      <li><a href="#contact" class="hover:text-pink  text-bold p-3 bg-pink-100 rounded-full shadow-sm">Contact</a></li>
     </ul>
 
-    <!-- Mobile Menu Button -->
+
     <button id="menu-btn" class="md:hidden text-pink text-3xl focus:outline-none">
       ☰
     </button>
   </div>
 
-  <!-- Mobile Menu -->
+
   <ul id="mobile-menu" class="hidden flex-col space-y-2 bg-pink-100 px-6 py-4 md:hidden">
     <li><a href="#home" class="hover:text-pink text-lg text-bold p-4 bg-pink-100 rounded-full shadow-sm">Home</a></li>
     <li><a href="#about" class="hover:text-pink text-lg text-bold p-4 bg-pink-100 rounded-full shadow-sm">About</a></li>
@@ -54,7 +53,7 @@
   });
 </script>
 
-<!-- Hero Section --> 
+
 <section id="home" class="hero h-screen flex items-center justify-center text-center py-20 px-10 bg-pink-300" style="background-image: url('assets/images/rounak\ logo.png');background-position:bottom; background-size: 100%;"> 
   <div> 
     <h2 class="text-5xl font-bold text-white">Welcome to Glitter Diary</h2> 
@@ -65,7 +64,7 @@
 
 
   
-<!-- About Section --> 
+
 <section id="about" class="py-20 bg-pink-200 "> 
   <div class="max-w-7xl mx-auto px-10 flex flex-col md:flex-row items-center"> 
     <img src="assets/images/rounak.jpg" class="w-64 h-64 object-cover rounded-full shadow-lg"> 
@@ -79,9 +78,9 @@
       <ul class="text-gray-700 space-y-4"> 
         <li class="p-4 bg-gray-100 rounded-2xl transform transition duration-300 hover:scale-105"> 
           <span class="font-bold text-pink-600">2018:</span> Diploma in Cosmetology at Bijal Gada Makeup Academy 
-        </li>
-         <li class="p-4 bg-gray-100 rounded-2xl transform transition duration-300 hover:scale-105"> 
-          <span class="font-bold text-pink-600">2022:</span> Master's in cosmetology       
+        </li> 
+        <li class="p-4 bg-gray-100 rounded-2xl transform transition duration-300 hover:scale-105"> 
+          <span class="font-bold text-pink-600">2022:</span> Master's in cosmetology
         </li> 
         <li class="p-4 bg-gray-100 rounded-xl shadow-sm transition duration-300 hover:scale-105">  
           <span class="font-bold text-pink-600">Specializations:</span> Bridal Makeup ,Party & Event Makeup , Nail Extensions ,Hair Styling ,Eyelash Extensions , Senior Skin Therapist. 
@@ -91,182 +90,198 @@
   </div> 
 </section> 
 
-<!--Bride photos-->
-<section id="Gallery" class="py-20 bg-pink-100">
-  <h2 class="text-4xl font-bold text-black text-center mb-10">
-    Happy Client
-  </h2>
 
-  <!-- Wrap gallery + swipe in relative -->
-  <div class="relative">
-    <!-- Horizontal scroll gallery -->
-    <div class="flex space-x-4 overflow-x-auto px-6 scrollbar-show ">
-    
-      <!-- Bride Photo 1 -->
-      <div class="max-w-xl  rounded-xl overflow-x-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/1.jpg" alt="Bride 1" class="w-full h-full object-cover hover:scale-105 transition duration-200">
+  
+  <section id="Gallery" class="py-20 bg-pink-100 relative">
+    <h2 class="text-4xl font-bold text-black text-center mb-10">
+      Happy Clients
+    </h2>
+    <div class="overflow-x-auto scrollbar-hide px-6">
+      <div class="flex space-x-6 w-max pb-4">
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/1.jpg')">
+            <img src="assets/Gallery/Photos/1.jpg" alt="Client 1" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/2.jpg')">
+            <img src="assets/Gallery/Photos/2.jpg" alt="Client 2" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/3.jpg')">
+            <img src="assets/Gallery/Photos/3.jpg" alt="Client 3" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/4.jpg')">
+            <img src="assets/Gallery/Photos/4.jpg" alt="Client 4" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/5.jpg')">
+            <img src="assets/Gallery/Photos/5.jpg" alt="Client 5" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/6.jpg')">
+            <img src="assets/Gallery/Photos/6.jpg" alt="Client 6" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/7.jpg')">
+            <img src="assets/Gallery/Photos/7.jpg" alt="Client 7" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/8.jpg')">
+            <img src="assets/Gallery/Photos/8.jpg" alt="Client 8" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/9.jpg')">
+            <img src="assets/Gallery/Photos/9.jpg" alt="Client 9" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/10.jpg')">
+            <img src="assets/Gallery/Photos/10.jpg" alt="Client 10" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/11.jpg')">
+            <img src="assets/Gallery/Photos/11.jpg" alt="Client 11" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/12.jpg')">
+            <img src="assets/Gallery/Photos/12.jpg" alt="Client 12" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/13.jpg')">
+            <img src="assets/Gallery/Photos/13.jpg" alt="Client 13" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/14.jpg')">
+            <img src="assets/Gallery/Photos/14.jpg" alt="Client 14" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/15.jpg')">
+            <img src="assets/Gallery/Photos/15.jpg" alt="Client 15" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/16.jpg')">
+            <img src="assets/Gallery/Photos/16.jpg" alt="Client 16" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/17.jpg')">
+            <img src="assets/Gallery/Photos/17.jpg" alt="Client 17" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/18.jpg')">
+            <img src="assets/Gallery/Photos/18.jpg" alt="Client 18" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/19.jpg')">
+            <img src="assets/Gallery/Photos/19.jpg" alt="Client 19" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/20.jpg')">
+            <img src="assets/Gallery/Photos/20.jpg" alt="Client 20" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/21.jpg')">
+            <img src="assets/Gallery/Photos/21.jpg" alt="Client 21" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/22.jpg')">
+            <img src="assets/Gallery/Photos/22.jpg" alt="Client 22" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
+        <div class="rounded-xl overflow-hidden shadow-lg flex-shrink-0">
+          <button onclick="openModal('assets/Gallery/Photos/23.jpg')">
+            <img src="assets/Gallery/Photos/23.jpg" alt="Client 23" class="w-64 h-80 object-cover hover:scale-105 transition duration-200">
+          </button>
+        </div>
       </div>
-
-      <!-- Bride Photo 2 -->
-      <div class=" max-w-xl rounded-xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/2.jpg" alt="Bride 2" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-
-      <!-- Bride Photo 3 -->
-      <div class="max-w-xl overflow-x-auto shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/3.jpg" alt="Bride 3" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-
-      <!-- Bride Photo 4 -->
-      <div class="max-w-xl rounded-xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/4.jpg" alt="Bride 4" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-
-      <!-- Bride Photo 5 -->
-      <div class="max-w-xl rounded-xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/5.jpg" alt="Bride 5" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-
-      <!-- Bride Photo 6 -->
-      <div class="max-w-xl rounded-xl rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/6.jpg" alt="Bride 6" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-
-      <!-- Bride Photo 7 -->
-      <div class="max-w-xl rounded-xl rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/7.jpg" alt="Bride 7" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-
-      <!-- Bride Photo 8 -->
-      <div class="max-w-xl rounded-xl rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/8.jpg" alt="Bride 7" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-    
-      <!-- Bride Photo 9 -->
-      <div class="max-w-xl rounded-xl rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/9.jpg" alt="Bride 7" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-
-      <!-- Bride Photo 10 -->
-      <div class="max-w-xl rounded-xl rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/10.jpg" alt="Bride 7" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-
-      <!-- Bride Photo 11 -->
-      <div class="max-w-xl rounded-xl rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/11.jpg" alt="Bride 7" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-    
-      <!-- Bride Photo 12 -->
-      <div class="max-w-xl rounded-xl rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/12.jpg" alt="Bride 7" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-
-      <!-- Bride Photo 13 -->
-      <div class="max-w-xl rounded-xl rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/13.jpg" alt="Bride 7" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-      
-      <!-- Bride Photo 14 -->
-      <div class="max-w-xl rounded-xl rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/14.jpg" alt="Bride 7" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-    
-      <!-- Bride Photo 15 -->
-      <div class="max-w-l rounded-xl rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/15.jpg" alt="Bride 7" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-        
-      <!-- Bride Photo 16 -->
-      <div class="max-w-xl rounded-xl rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/16.jpg" alt="Bride 7" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-        
-      <!-- Bride Photo 17 -->
-      <div class="max-w-xl rounded-xl rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/17.jpg" alt="Bride 7" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-        
-      <!-- Bride Photo 18-->
-      <div class="max-w-xl rounded-xl rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/18.jpg" alt="Bride 7" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-
-      <!-- Bride Photo 19 -->
-      <div class="max-w-xl rounded-xl rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/19.jpg" alt="Bride 7" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-        
-      <!-- Bride Photo 20 -->
-      <div class="max-w-xl rounded-xl rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/20.jpg" alt="Bride 7" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-    
-      <!-- Bride Photo 21 -->
-      <div class="max-w-xl rounded-xl rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/21.jpg" alt="Bride 7" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-        
-      <!-- Bride Photo 22 -->
-      <div class="max-w-xl rounded-xl rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/22.jpg" alt="Bride 7" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-    
-      <!-- Bride Photo 23 -->
-      <div class="max-w-xl rounded-xl rounded-2xl overflow-hidden shadow-lg flex-shrink-0">
-        <img src="assets/Gallery/Photos/23.jpg" alt="Bride 7" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-      </div>
-
-      <!-- Add more photos here -->
-
     </div>
-<!-- Swipe Indicator (improved visibility) -->
-<div class="absolute top-1/2 left-4 transform -translate-y-1/2 flex items-center space-x-2 animate-bounce 
-            bg-pink-600/80 text-white px-3 py-1 rounded-full shadow-lg">
-  <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H4"/>
-  </svg>
-  <span class="font-semibold drop-shadow-md">Swipe</span>
-</div>
-  </div>
-</section>
 
-<!-- Services Section --> 
+    
+    <div class="absolute top-1/2 left-4 transform -translate-y-1/2 flex items-center space-x-2 animate-bounce 
+                bg-pink-600/80 text-white px-3 py-1 rounded-full shadow-lg">
+      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H4"/>
+      </svg>
+      <span class="font-semibold drop-shadow-md">Swipe</span>
+    </div>
+  </section>
+
+  
+  <div id="imageModal" class="fixed inset-0 bg-black bg-opacity-80 hidden items-center justify-center z-50">
+    <span class="absolute top-5 right-8 text-white text-3xl cursor-pointer" onclick="closeModal()">&times;</span>
+    <img id="modalImage" src="" class="max-w-4xl max-h-[90vh] rounded-lg shadow-2xl">
+  </div>
+
+  <script>
+    document.getElementById("menu-btn").addEventListener("click", () => {
+      document.getElementById("mobile-menu").classList.toggle("hidden");
+    });
+    function openModal(src) {
+      document.getElementById("modalImage").src = src;
+      document.getElementById("imageModal").classList.remove("hidden");
+      document.getElementById("imageModal").classList.add("flex");
+    }
+    function closeModal() {
+      document.getElementById("imageModal").classList.add("hidden");
+      document.getElementById("imageModal").classList.remove("flex");
+    }
+  </script>
+
+
 <section id="services" class="py-20 bg-pink-300 "> 
   <div class="container mx-auto text-center"> 
     <h2 class="text-4xl font-bold  section-title">Our Services</h2> 
     <div class="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3"> 
-      <!-- Service 1 --> 
+
       <div class="bg-pink-200 p-8 rounded-xl shadow-lg  transition duration-300 hover:scale-105"> 
         <h3 class="text-2xl font-semibold text-pink-600 mb-3">Bridal Makeup</h3> 
         <p class="text-gray italic">Timeless glam crafted to make you feel like royalty. Packages available for Premium, Elite, and Luxury.</p> 
       </div> 
 
-      <!-- Service 2 --> 
       <div class="bg-pink-200 p-8 rounded-xl shadow-lg transform transition duration-300 hover:scale-105"> 
         <h3 class="text-2xl font-semibold  text-pink-600 mb-3">Pre-Wedding & Engagement</h3> 
         <p class="text-gray italic">Soft, natural glam for pre-wedding photoshoots and dreamy looks for your ring ceremony.</p> 
       </div> 
 
-      <!-- Service 3 --> 
+
       <div class="bg-pink-200 p-8 rounded-xl shadow-lg transform transition duration-300 hover:scale-105"> 
         <h3 class="text-2xl font-semibold text-pink-600 mb-3">Party & Occasion Makeup</h3> 
         <p class="text-gray italic">From elegant party makeup to bold cocktail and sangeet looks, perfect for any celebration.</p> 
       </div> 
 
-      <!-- Service 4 --> 
+
       <div class="bg-pink-200 p-8 rounded-xl shadow-lg transform transition duration-300 hover:scale-105"> 
         <h3 class="text-2xl font-semibold text-pink-600 mb-3">Photoshoot & Editorial</h3> 
         <p class="text-gray italic">Sophisticated, camera-ready looks for fashion, pre-wedding, and editorial shoots.</p> 
       </div> 
 
-      <!-- Service 5 --> 
+
       <div class="bg-pink-200 p-8 rounded-xl shadow-lg transform transition duration-300 hover:scale-105"> 
         <h3 class="text-2xl font-semibold text-pink-600 mb-3">Family & Guests</h3> 
         <p class="text-gray italic">Flawless makeup for family members and guests attending your special event.</p> 
       </div> 
 
-      <!-- Service 6 --> 
+
       <div class="bg-pink-200 p-8 rounded-xl shadow-lg transform transition duration-300 hover:scale-105"> 
         <h3 class="text-2xl font-semibold text-pink-600 mb-3">Makeup Lessons</h3> 
         <p class="text-gray italic">Personalized one-on-one sessions to master essential makeup techniques.</p> 
@@ -275,7 +290,7 @@
   </div> 
 </section> 
 
-<!-- Pricing Section --> 
+
 <section id="pricing" class="py-20 bg-pink-200 "> 
   <div class="container mx-auto text-center transform transition duration-300 hover:scale-104"> 
     <h2 class="text-4xl font-bold text-gray section-title">Pricing & Packages</h2> 
@@ -283,7 +298,7 @@
       Explore our curated packages designed to suit your style and celebration. Please note prices may vary depending on brand choice. 
     </p> 
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3"> 
-      <!-- Pricing Card 1: Bridal --> 
+
       <div class="bg-pink-300 p-12 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105"> 
         <h3 class="text-2xl font-bold text-pink-600 mb-4">Bridal Makeup</h3> 
         <p class="text-gray-700 italic mb-6 font-family">Timeless glam for your big day, making you feel like royalty.</p> 
@@ -294,7 +309,7 @@
         </ul> 
       </div> 
 
-      <!-- Pricing Card 2: Engagement --> 
+
       <div class="bg-pink-300 p-12 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105"> 
         <h3 class="text-2xl font-bold text-pink-600 mb-4">Engagement</h3> 
         <p class="text-gray-700 italic mb-6 font-family">A dreamy look that makes you glow for your ring ceremony.</p> 
@@ -305,7 +320,7 @@
         </ul> 
       </div> 
 
-      <!-- Pricing Card 3: Reception --> 
+
       <div class="bg-pink-300 p-10 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105"> 
         <h3 class="text-2xl font-bold text-pink-600 mb-4">Reception</h3> 
         <p class="text-gray-700 italic mb-6 font-family">A flawless, regal look to end your wedding celebrations in style..</p> 
@@ -316,7 +331,7 @@
         </ul> 
       </div> 
 
-      <!-- Pricing Card 4:Pre Wedding Makeup --> 
+
       <div class="bg-pink-300 p-12 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105"> 
         <h3 class="text-2xl font-bold text-pink-600 mb-4">Pre Wedding Makeup</h3> 
         <p class="text-gray-700 italic mb-6 font-family">Soft & natural glam for photo shoots and casual ceremonies..</p> 
@@ -326,7 +341,7 @@
         </ul> 
       </div> 
 
-            <!-- Pricing Card 6:  Haldi & Mehndi Makeup --> 
+
             <div class="bg-pink-300 p-12 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105"> 
               <h3 class="text-2xl font-bold text-pink-600 mb-4">Haldi & Mehndi Makeup</h3> 
               <p class="text-gray-700 italic mb-6 font-family">Traditional yet stylish glam to match the colorful vibes of Mehndi..</p> 
@@ -336,7 +351,6 @@
               </ul> 
             </div> 
 
-            <!-- Pricing Card 6: COCKTAIL/SANGEET Makeup --> 
             <div class="bg-pink-300 p-12 rounded-2xl shadow-lg transform transition duration-300 hover:scale-105"> 
               <h3 class="text-2xl font-bold text-pink-600 mb-4">cocktail & sangeet </h3> 
               <p class="text-gray-700 italic mb-6 font-family">Bold, glamorous looks perfect for dancing the night away..</p> 
@@ -350,13 +364,13 @@
   </div> 
 </section> 
 
-<!-- TERM AND CONDITION -->
+
 <section id="terms" class="py-20 bg-pink-200">
   <div class="container mx-auto text-center max-w-5xl">
     <h2 class="text-4xl font-bold text-pink-600 mb-8">Booking Terms & Policies</h2>
     <div class="bg-pink-100 p-10 rounded-2xl shadow-lg text-left space-y-10">
 
-      <!-- Booking Terms -->
+
       <div>
         <h3 class="text-2xl font-semibold text-black mb-4">Booking Terms</h3>
         <ul class="list-decimal list-inside text-gray space-y-3">
@@ -370,7 +384,7 @@
         </ul>
       </div>
 
-      <!-- Travel & Outstation Booking -->
+
       <div>
         <h3 class="text-2xl font-semibold text-black mb-4">Travel & Outstation Booking</h3>
         <ul class="list-decimal list-inside text-gray space-y-3">
@@ -387,102 +401,97 @@
 </section>
 
 
-<!-- Testimonials Section -->
-<section id="testimonials" class="py-20 bg-pink-200">
+
+<section id="testimonials" class="py-20 bg-pink-200 relative">
   <div class="text-center">
     <h2 class="text-4xl font-bold text-gray-800 section-title">Rave Reviews</h2>
 
-    <!-- Full-width Scrollable Container -->
+
     <div class="mt-12 overflow-x-auto w-screen">
       <div class="flex space-x-6 pb-6 snap-x snap-mandatory w-max">
       
-        <!-- Review 1 -->
+
         <div class="bg-pink-400 p-8 rounded-full shadow-lg w-80 flex-shrink-0 snap-start">
           <p class="text-gray italic">"I absolutely loved my makeup! It was flawless, long-lasting, and made me feel so beautiful on my special day. Thank you!"</p>
           <p class="mt-4 font-semibold text-black">~ Bride Sonali</p>
         </div>
 
-        <!-- Review 2 -->
+
         <div class="bg-pink-400 p-8 rounded-full shadow-lg w-80 flex-shrink-0 snap-start">
           <p class="text-gray italic">"Super happy with my makeup! It looked so natural yet glamorous and stayed perfect all day."</p>
           <p class="mt-4 font-semibold text-black">- Bride Vagisha</p>
         </div>
 
-        <!-- Review 3 -->
+
         <div class="bg-pink-400 p-8 rounded-full shadow-lg w-80 flex-shrink-0 snap-start">
           <p class="text-gray italic">"The makeup was just perfect – exactly what I wanted! It enhanced my features beautifully and lasted throughout the event. Highly recommended!"</p>
           <p class="mt-4 font-semibold text-black">- Bride Shivani</p>
         </div>
 
-        <!-- Review 4 -->
+
         <div class="bg-pink-400 p-8 rounded-full shadow-lg w-80 flex-shrink-0 snap-start">
           <p class="text-gray italic">"Loved my makeup! It was elegant, flawless, and made me feel confident all day. Thank you for the wonderful work!"</p>
           <p class="mt-4 font-semibold text-black">- Bride Anjali</p>
         </div>
 
-        <!-- Review 5 -->
+
         <div class="bg-pink-400 p-8 rounded-full shadow-lg w-80 flex-shrink-0 snap-start">
           <p class="text-gray italic">"My look was exactly how I dreamed – fresh, radiant, and picture-perfect. Truly professional and caring!"</p>
           <p class="mt-4 font-semibold text-black">- Bride Ashmita</p>
         </div>
 
-        <!-- Review 6 -->
+
         <div class="bg-pink-400 p-8 rounded-full shadow-lg w-80 flex-shrink-0 snap-start">
           <p class="text-gray italic">"Very satisfied with my makeup! It was done beautifully, stayed all day, and made me feel so special. Thank you so much!"</p>
           <p class="mt-4 font-semibold text-black">- Bride Abha</p>
         </div>
 
-        <!-- Review 7 -->
+
         <div class="bg-pink-400 p-8 rounded-full shadow-lg w-80 flex-shrink-0 snap-start">
           <p class="text-gray italic">"So happy with my makeup! It looked stunning, stayed flawless all day, and made me feel truly confident. Thank you for your amazing work!"</p>
           <p class="mt-4 font-semibold text-black">- Bride Mona</p>
         </div>
 
-        <!-- Review 8 -->
+
         <div class="bg-pink-400 p-8 rounded-full shadow-lg w-80 flex-shrink-0 snap-start">
           <p class="text-gray italic">"Perfect makeup service! My look was elegant, polished, and lasted without any touch-ups. Very professional and talented!"</p>
           <p class="mt-4 font-semibold text-black">- Bride Manisha</p>
         </div>
 
-        <!-- Review 9 -->
+
         <div class="bg-pink-400 p-8 rounded-full shadow-lg w-80 flex-shrink-0 snap-start">
           <p class="text-gray italic">"The makeup was just beautiful! It enhanced my natural features and stayed fresh all day. Very happy with the service!"</p>
           <p class="mt-4 font-semibold text-black">- Bride Sweta</p>
         </div>
 
-        <!-- Review 10 -->
+
         <div class="bg-pink-400 p-8 rounded-full shadow-lg w-80 flex-shrink-0 snap-start">
           <p class="text-gray italic">"Extremely pleased with my makeup! It was exactly what I wanted – flawless, natural, and long-lasting. Thank you for the wonderful work!"</p>
           <p class="mt-4 font-semibold text-black">- Bride Suman</p>
         </div>
 
-        <!-- Review 11 -->
+
         <div class="bg-pink-400 p-8 rounded-full shadow-lg w-80 flex-shrink-0 snap-start">
           <p class="text-gray italic">"In love with my makeup! It looked so elegant and stayed perfect from morning till night. Thank you✨💖"</p>
           <p class="mt-4 font-semibold text-black">- Bride Priya</p>
         </div>
 
-        <!-- Review 12 -->
+
         <div class="bg-pink-400 p-8 rounded-full shadow-lg w-80 flex-shrink-0 snap-start">
           <p class="text-gray italic">"Beautiful makeup, exactly how I imagined! It was long-lasting, well-blended, and made me feel so confident. Thank you so much!"</p>
           <p class="mt-4 font-semibold text-black">- Bride Shruti</p>
         </div>
 
-        <!-- Review 13 -->
         <div class="bg-pink-400 p-8 rounded-full shadow-lg w-80 flex-shrink-0 snap-start">
           <p class="text-gray italic">"Absolutely loved my bridal makeup! It was perfectly done, stayed all day, and made me feel so special. Thank you for your great work!"</p>
           <p class="mt-4 font-semibold text-black">- Bride Ayushi</p>
         </div>
-
       </div>
     </div>
   </div>
 </section>
 
 
-
-
-<!-- Contact Section --> 
 <section id="contact" class="py-20 px-6 bg-pink-100"> 
   <div class="container mx-auto text-center max-w-3xl"> 
     <h2 class="text-4xl font-bold text-gray-800 section-title">Let's Connect</h2> 
@@ -514,7 +523,7 @@
   </div> 
 </section> 
 
-<!-- Footer --> 
+
 <footer class="bg-pink-500 text-white py-6 text-center"> 
   <p>&copy; 2025 Glitter Diary. All rights reserved.</p> 
 </footer> 
